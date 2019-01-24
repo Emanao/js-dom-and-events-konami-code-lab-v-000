@@ -6,12 +6,14 @@ function init() {
   let index = 0;
 
   body.addEventListener('keydown', function(e){
-  const key = parseInt(e.detail || e.which);
-  if (e.which === 16 || e.which === 20) {
+  const key = parseInt(e.detail || e.keyCode);
+  console.log(key)
+  if (e.keyCode === 16 || e.keyCode === 20) {
     return e.preventDefault()
   }
   if (key === code[index]) {
     index++;
+    console.log(key)
 
     if (index === code.length) {
       alert("Hurray!");
